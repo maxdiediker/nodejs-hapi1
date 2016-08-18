@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html>
+  <body>
+
+    <button><a href="index">goto index</a></button>
+    <button><a href="/order">goto orders</a></button>
+    <span class = "login">hello, {{user}} welcome to pissz shack<span>
+    <h1>Welcome to pizza shack</h1>
+    <form action="/order" method = "POST">
+      <label for = "pizza">pizza</label>
+      <input name="pizza"></br>
+      <select name = "size"></br>
+        <option value = "l">large</option>
+        <option value = "m">medium</option></br>
+        <option value = "s">small</option>
+      </select></br>
+      <label for = "phone">Phone Number</label></br>
+      <input name = "phone"></br>
+      <input type = "submit">
+    </form>
+    <ul>
+        {{#each pizzas}}
+          <li>{{pizza}} - {{size}} {{phone}}
+
+        {{/each}}
+      </ul>
+
+  </body>
+</html>
